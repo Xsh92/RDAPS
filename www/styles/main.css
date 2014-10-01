@@ -180,13 +180,13 @@ body
     -webkit-box-shadow: inset 0px 1px 7px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: inset 0px 1px 7px 0px rgba(0,0,0,0.5);
 }
-.footer:before
+/*.footer:before
 {
 	content: url(img/logo.png);
 	position: relative;
 	left: 12px;
     top:2px;
-}
+}*/
 
 .footer div
 {
