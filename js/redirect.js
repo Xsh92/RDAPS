@@ -1,5 +1,5 @@
 function openBrowser() {
-    var ref = window.open('http://www.curtin.edu.my', '_blank');
+    var ref = window.open('http://www.curtin.edu.my', '_blank', 'location=yes');
     ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
     ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
     ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
@@ -7,7 +7,7 @@ function openBrowser() {
 }
 
 function openExtBrowser() {
-    var ref1 = window.open('http://moodle.curtin.edu.my', '_system');
+    var ref1 = window.open('http://moodle.curtin.edu.my', '_system', 'location=yes');
     ref1.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
     ref1.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
     ref1.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
