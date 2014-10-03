@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>In-App Browser</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0;" />
+    <script src="cordova.js"></script>
+    <script>
+        function onLoad() {
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }        
+        
+        function onDeviceReady(){
+            alert("device ready");
+            navigator.splashscreen.hide(); 
+        } 
+    </script>    
+</head>
+    
+<body onload="onLoad()"> 
+    <br>
+    <br>    
+        <button>
+            <a href="#" onclick="window.open('http://google.org', '_system')">Link _system (device browser)</a>
+        </button>
+    <br>
+    <br>
+        <button>
+            <a href="#" onclick="window.open('http://apache.org', '_blank')">Link _blank (In-app browser)</a>              
+        </button>
+    <br>
+    <br>
+        <button>
+            <a href="#" onclick="window.open('http://moodle.curtin.edu.my/login/index.php', '_system')">Moodle</a>    
+        </button>
+</body>
+</html> 
