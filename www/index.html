@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blank Hybrid App Project Template</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }                           @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }                                    @viewport { user-zoom: fixed ; }
+    </style>
+
+<!-- See long explanation at the bottom of this file for info regarding placement of JS libraries. -->
+<!-- These library references (below) are just examples to give you the general idea... -->
+    <!-- <script src="lib/ft/fastclick.js"></script> -->
+    <!-- <script src="lib/jq/jquery.js"></script> -->
+    <!-- <script src="lib/af/jq.appframework.js"></script> -->
+    <!-- <script src="lib/af/appframework.ui.js"></script> -->
+
+    <!-- <link rel="stylesheet" href="lib/af/icons.css"> -->
+    <!-- <link rel="stylesheet" href="lib/af/af.ui.css"> -->
+<!--
+    <script>
+		// if you're using App Framework, you might want to do this
+        $.ui.autoLaunch = false ;
+        // and then use $.ui.launch() in the app.initApplication() function
+        // see https://github.com/01org/appframework/blob/master/documentation/detail/%24.ui.launch.md
+    </script>
+-->
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <script src="intelxdk.js"></script>
+    <script src="cordova.js"></script>
+    <script src="xhr.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/init-app.js"></script>
+    <script src="js/init-dev.js"></script>
+    <script src="js/main.js"></script>
+    <script>$('a.js_open_external').click(function(e){
+   e.preventDefault();
+   intel.xdk.device.launchExternal($(this).attr('href'));
+});</script>
+
+    <h1 class="align-center">A Blank Project Template</h1>
+    <br>
+    <p class="align-center">
+        <input type="button" id="id_btnHello" value="Touch Me">
+    </p>
+    <p>
+        <button onclick="openBrowser()"> Open in browser </button>
+        <a href="http://google.com" class="js_open_external"><button>click me</button></a>
+        <button onclick="openE()">Yahoo</button>
+        <a href="#" onclick="intel.xdk.device.launchExternal('http://www.google.com');">Launch in Browser</a>
+        <a href="#" onclick="AppMobi.device.launchExternal('http://www.google.com');">Google</a>
+    </p>
+</body>
+</html>
