@@ -27,6 +27,7 @@
     </script>
 -->
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <script src="intelxdk.js"></script>
@@ -38,21 +39,39 @@
     <script src="js/init-dev.js"></script>
     <script src="js/main.js"></script>
     <script>$('a.js_open_external').click(function(e){
-   e.preventDefault();
-   intel.xdk.device.launchExternal($(this).attr('href'));
-});</script>
+           e.preventDefault();
+           intel.xdk.device.launchExternal($(this).attr('href'));
+        });
+    </script>
 
-    <h1 class="align-center">A Blank Project Template</h1>
-    <br>
-    <p class="align-center">
-        <input type="button" id="id_btnHello" value="Touch Me">
-    </p>
-    <p>
-        <button onclick="openBrowser()"> Open in browser </button>
-        <a href="http://google.com" class="js_open_external"><button>click me</button></a>
-        <button onclick="openE()">Yahoo</button>
-        <a href="#" onclick="intel.xdk.device.launchExternal('http://www.google.com');">Launch in Browser</a>
-        <a href="#" onclick="AppMobi.device.launchExternal('http://www.google.com');">Google</a>
-    </p>
+    <header class="header">
+        <h1> Curtin Bla Bla Bla </h1>
+    </header>
+    <div class="content">
+        <div class="action-area ch80">
+            <button class="button dh" onclick="openMoodle()"> Moodle </button>
+            <button class="button dh" onclick="openBB()"> Blackboard </button>
+            <button class="button dh" onclick="openOasis()"> Oasis </button>
+            <button class="button dh" onclick="openBus()"> Bus Schedule </button>
+            <button class="button dh" onclick="openCurtin()"> Curtin </button>
+            <button class="button dh" onclick="openLibrary()"> Library </button>
+            <button class="button dh" onclick="openImpDate()"> Important Dates </button>
+            <button class="button dh" onclick="openPubHoliday()"> Public Holiday </button>
+            <button class="button dh" onclick="openEvent()"> Incoming Event </button>
+            <button class="button dh" onclick=""> Dummy Button DunTouchMeGoAway </button>
+            
+        </div>
+        <div class="result-area ch20">
+            <div class="results" align="middle">
+                <div id="log" class="desc" type="text" readonly="readonly">Intel XDK - PhoneGap - JQM</div>
+                <div id="log" class="desc"><input type="button" id="id_btnHello" value="Check Cordova Here"></div>
+                
+            </div>
+        </div>
+        <div class="separator"></div>
+    </div>
+    <footer class="footer">
+        <div>---Nothing to see here, Get Out!---</div>
+    </footer>
 </body>
 </html>
